@@ -1,4 +1,4 @@
-SELECT AVG(speed)
-FROM PC INNER JOIN Product
-ON PC.model = Product.model
-WHERE maker = 'A'
+SELECT AVG(PC.speed)
+FROM PC INNER JOIN Product AS p
+ON PC.model = p.model
+WHERE p.maker = 'A'

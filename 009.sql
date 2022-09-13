@@ -1,4 +1,4 @@
-SELECT DISTINCT maker
-FROM PC INNER JOIN Product
-ON PC.model = Product.model
-WHERE speed >= 450
+SELECT DISTINCT p.maker
+FROM PC INNER JOIN Product p
+ON PC.model = p.model
+WHERE PC.speed >= 450

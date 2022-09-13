@@ -1,4 +1,4 @@
-SELECT DISTINCT maker, speed
-FROM Product INNER JOIN Laptop
-ON Product.model = Laptop.model
+SELECT DISTINCT p.maker, l.speed
+FROM Product AS p JOIN Laptop AS l
+ON p.model = l.model
 WHERE type = 'Laptop' AND hd >= 10

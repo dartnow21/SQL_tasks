@@ -1,14 +1,14 @@
-SELECT Laptop.model, price
-FROM Laptop INNER JOIN Product
-ON Laptop.model = Product.model
-WHERE Product.maker = 'B'
+SELECT l.model, l.price
+FROM Laptop l JOIN Product p
+ON l.model = p.model
+WHERE p.maker = 'B'
 UNION 
-SELECT PC.model, price
-FROM PC INNER JOIN Product
-ON PC.model = Product.model
-WHERE Product.maker = 'B'
+SELECT PC.model, l.price
+FROM PC JOIN Product p
+ON PC.model = p.model
+WHERE p.maker = 'B'
 UNION 
-SELECT Printer.model, price
-FROM Printer INNER JOIN Product
-ON Printer.model = Product.model
-WHERE Product.maker = 'B'
+SELECT pr.model, l.price
+FROM Printer pr JOIN Product p
+ON pr.model = p.model
+WHERE p.maker = 'B'
